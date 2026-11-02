@@ -1,7 +1,7 @@
 {
   "name": "Rossi consolidated DNS blocklist",
   "generated_at": "2026-11-02T15:56:57+00:00",
-  "checked_at": "2026-11-02T15:56:57+00:00",
+  "checked_at": "2026-11-02T15:57:17+00:00",
   "input_rule_lines": 598479,
   "exact_duplicates_removed": 103849,
   "redundant_plain_subdomain_rules_removed": 11693,
