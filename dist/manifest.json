@@ -1,7 +1,7 @@
 {
   "name": "Rossi consolidated DNS blocklist",
-  "generated_at": "2026-11-02T15:28:55+00:00",
-  "checked_at": "2026-11-02T15:45:33+00:00",
+  "generated_at": "2026-11-02T15:51:29+00:00",
+  "checked_at": "2026-11-02T15:51:29+00:00",
   "input_rule_lines": 598478,
   "exact_duplicates_removed": 103849,
   "redundant_plain_subdomain_rules_removed": 11693,
@@ -10,7 +10,7 @@
   "output_rule_lines": 482936,
   "exception_rules_preserved": 212,
   "rules_sha256": "baf4970b5730bfd511cff09a4fd11f96692465179c35bad3154276e6a8fc2a74",
-  "feed_sha256": "5ed63dcc6547e8c9cd152539a718cc4febe8b1a2fc90f74d2727c298dab5a07f",
+  "feed_sha256": "d42259893602330b9134b695198f2ff825f5c1da82340b1af1c531619aaaeed4",
   "sources": [
     {
       "name": "AdGuard DNS filter",
@@ -40,5 +40,6 @@
       "sha256": "0d81148f9990ecbde614ba1a135f81113fbb5f9972e783af22ff1c6dadb57508",
       "rule_lines": 77772
     }
-  ]
+  ],
+  "verification_revision": "Metadata-only revision for a monitored router reload"
 }

@@ -2,7 +2,7 @@
 ! Description: Four existing DNS lists, consolidated without broadening hosts rules.
 ! Homepage: https://github.com/joshuarossi/home-dns-blocklist
 ! Expires: 1 day
-! Generated: 2026-11-02T15:28:55+00:00
+! Generated: 2026-11-02T15:51:29+00:00
 ! Rule lines: 482936
 ! Rule SHA256: baf4970b5730bfd511cff09a4fd11f96692465179c35bad3154276e6a8fc2a74
 ! Upstream notices and licenses: source-notices.txt and SOURCES.md in this repository.
