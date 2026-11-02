@@ -41,8 +41,9 @@ Edit `custom-rules.txt` to add reviewed blocking rules or exceptions. These rule
 are merged with the four upstream sources. Initially it contains only
 `||rossi-refresh-test.invalid^`, a reserved-domain health check for confirming that
 the feed is active and testing a real in-place update. It cannot block a real
-public website. After editing, run the GitHub update workflow or wait for the
-daily build. Browsing history is not part of this file.
+public website. Saving a change to this file triggers a GitHub rebuild automatically. You can
+also run the workflow manually or wait for the daily build. Browsing history is
+not part of this file.
 
 ## Router change and rollback
 
