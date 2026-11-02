@@ -4,6 +4,8 @@ import io
 import json
 from pathlib import Path
 import tempfile
+from unittest.mock import patch
+import datetime
 
 from build import main, merge, read_rules
 
@@ -88,6 +90,44 @@ class RuleSemanticsTests(unittest.TestCase):
             output.mkdir()
             (output / 'blocklist.txt').write_text('previous valid list\n')
             (output / 'manifest.json').write_text(json.dumps({'output_rule_lines': 100}))
+            with self.assertRaises(ValueError), contextlib.redirect_stdout(io.StringIO()):
+                main(['--config', str(config), '--cache-dir', str(root), '--output-dir', str(output)])
+            self.assertEqual((output / 'blocklist.txt').read_text(), 'previous valid list\n')
+
+    def test_unchanged_rules_keep_the_published_feed_byte_identical(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            config = root / 'sources.json'
+            config.write_text(json.dumps({'name': 'test', 'sources': [
+                {'name': 'test', 'url': 'https://example.test/list', 'minimum_rules': 1}
+            ]}))
+            (root / 'test.txt').write_text('||example.com^\n')
+            output = root / 'dist'
+            args = ['--config', str(config), '--cache-dir', str(root), '--output-dir', str(output)]
+            with contextlib.redirect_stdout(io.StringIO()):
+                main(args)
+            first = (output / 'blocklist.txt').read_bytes()
+            future = datetime.datetime(2030, 1, 1, tzinfo=datetime.timezone.utc)
+            with patch('build.datetime.datetime') as clock, contextlib.redirect_stdout(io.StringIO()):
+                clock.now.return_value = future
+                main(args)
+            self.assertEqual((output / 'blocklist.txt').read_bytes(), first)
+            self.assertTrue(json.loads((output / 'manifest.json').read_text())['checked_at'].startswith('2030'))
+
+    def test_source_shrink_is_checked_independently_of_total_output(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            config = root / 'sources.json'
+            config.write_text(json.dumps({'name': 'test', 'sources': [
+                {'name': 'test', 'url': 'https://example.test/list', 'minimum_rules': 1}
+            ]}))
+            (root / 'test.txt').write_text('||one.test^\n||two.test^\n')
+            output = root / 'dist'
+            output.mkdir()
+            (output / 'blocklist.txt').write_text('previous valid list\n')
+            (output / 'manifest.json').write_text(json.dumps({
+                'output_rule_lines': 2, 'sources': [{'name': 'test', 'rule_lines': 100}]
+            }))
             with self.assertRaises(ValueError), contextlib.redirect_stdout(io.StringIO()):
                 main(['--config', str(config), '--cache-dir', str(root), '--output-dir', str(output)])
             self.assertEqual((output / 'blocklist.txt').read_text(), 'previous valid list\n')

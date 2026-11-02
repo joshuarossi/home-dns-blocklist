@@ -17,9 +17,11 @@ wildcard blocks. Parent blocks disabled by badfilter are excluded from pruning,
 so their child rules remain intact.
 
 Each source must pass basic content and size checks. Large unexpected output
-reductions fail the build. A failed build leaves the last published version in
+or individual-source reductions fail the build. A failed build leaves the last published version in
 place. `dist/manifest.json` records source hashes, counts, output hashes, and the
-build time. Source attribution is preserved alongside the feed.
+build time. Source attribution is preserved alongside the feed. If the merged
+rules are unchanged, the published feed stays byte-for-byte identical, avoiding
+timestamp-only changes that would trigger an unnecessary AdGuard rebuild.
 
 ## Build and test
 
