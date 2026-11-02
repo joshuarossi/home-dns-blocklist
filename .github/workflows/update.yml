@@ -9,6 +9,7 @@ on:
       - build.py
       - test_build.py
       - sources.json
+      - custom-rules.txt
       - .github/workflows/update.yml
 
 permissions:
