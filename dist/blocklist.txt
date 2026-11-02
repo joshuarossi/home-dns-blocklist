@@ -1,10 +1,10 @@
 ! Title: Rossi consolidated DNS blocklist
-! Description: Four existing DNS lists, consolidated without broadening hosts rules.
+! Description: Four DNS lists and owner-controlled rules; hosts rules are not broadened.
 ! Homepage: https://github.com/joshuarossi/home-dns-blocklist
 ! Expires: 1 day
-! Generated: 2026-11-02T15:51:29+00:00
-! Rule lines: 482936
-! Rule SHA256: baf4970b5730bfd511cff09a4fd11f96692465179c35bad3154276e6a8fc2a74
+! Generated: 2026-11-02T15:56:57+00:00
+! Rule lines: 482937
+! Rule SHA256: fb1db61b7267d46bda24d0b89c48325b447ce3fb946caed71c8624fcc5f95fa3
 ! Upstream notices and licenses: source-notices.txt and SOURCES.md in this repository.
 ! Source: https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt
 ! Source: https://big.oisd.nl
@@ -482947,3 +482947,4 @@ ff02::3 ip6-allhosts
 0.0.0.0 zonewedgeshaft.com
 0.0.0.0 zpu.samsungelectronics.com
 0.0.0.0 zqtk.net
+||rossi-refresh-test.invalid^

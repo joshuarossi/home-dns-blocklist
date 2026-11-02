@@ -132,6 +132,23 @@ class RuleSemanticsTests(unittest.TestCase):
                 main(['--config', str(config), '--cache-dir', str(root), '--output-dir', str(output)])
             self.assertEqual((output / 'blocklist.txt').read_text(), 'previous valid list\n')
 
+    def test_owner_rules_are_included_with_exceptions_preserved(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            config = root / 'sources.json'
+            config.write_text(json.dumps({'name': 'test', 'local_rules': 'custom.txt', 'sources': [
+                {'name': 'test', 'url': 'https://example.test/list', 'minimum_rules': 1}
+            ]}))
+            (root / 'test.txt').write_text('||example.com^\n')
+            (root / 'custom.txt').write_text('@@||shop.example.com^\n||healthcheck.invalid^\n')
+            output = root / 'dist'
+            with contextlib.redirect_stdout(io.StringIO()):
+                main(['--config', str(config), '--cache-dir', str(root), '--output-dir', str(output)])
+            feed = (output / 'blocklist.txt').read_text()
+            self.assertIn('@@||shop.example.com^', feed)
+            self.assertIn('||healthcheck.invalid^', feed)
+            self.assertEqual(json.loads((output / 'manifest.json').read_text())['local_rules']['rule_lines'], 2)
+
 
 if __name__ == '__main__':
     unittest.main()

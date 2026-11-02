@@ -1,0 +1,4 @@
+! Rules controlled by the owner of this feed.
+! MIT License, Copyright (c) 2026 Joshua Rossi.
+! Reserved-domain health check. It cannot match a real public website.
+||rossi-refresh-test.invalid^

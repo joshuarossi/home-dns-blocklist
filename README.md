@@ -35,6 +35,15 @@ python3 build.py
 The GitHub workflow refreshes the list daily and can also be run manually. AdGuard
 Home can retain its normal 24-hour update interval.
 
+## Owner-controlled rules
+
+Edit `custom-rules.txt` to add reviewed blocking rules or exceptions. These rules
+are merged with the four upstream sources. Initially it contains only
+`||rossi-refresh-test.invalid^`, a reserved-domain health check for confirming that
+the feed is active and testing a real in-place update. It cannot block a real
+public website. After editing, run the GitHub update workflow or wait for the
+daily build. Browsing history is not part of this file.
+
 ## Router change and rollback
 
 Keep the original four list entries disabled after enabling the consolidated

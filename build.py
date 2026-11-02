@@ -125,6 +125,14 @@ def main(argv=None):
     with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
         fetched = list(pool.map(lambda source: download(source, args.cache_dir), config['sources']))
     groups = [entry[0] for entry in fetched]
+    local_metadata = None
+    if config.get('local_rules'):
+        local_path = args.config.parent / config['local_rules']
+        local_raw = local_path.read_bytes()
+        local_rules, _ = read_rules(local_raw.decode('utf-8-sig'))
+        groups.append(local_rules)
+        local_metadata = {'path': config['local_rules'], 'rule_lines': len(local_rules),
+                          'sha256': hashlib.sha256(local_raw).hexdigest()}
     rules, stats = merge(groups)
     if not rules or stats['exception_rules_preserved'] != len({r for g in groups for r in g if r.startswith('@@')}):
         raise ValueError('Output is empty or an exception rule was lost')
@@ -144,7 +152,7 @@ def main(argv=None):
     digest = hashlib.sha256(body.encode()).hexdigest()
     header = [
         '! Title: ' + config['name'],
-        '! Description: Four existing DNS lists, consolidated without broadening hosts rules.',
+        '! Description: Four DNS lists and owner-controlled rules; hosts rules are not broadened.',
         '! Homepage: https://github.com/joshuarossi/home-dns-blocklist',
         '! Expires: 1 day',
         '! Generated: ' + now,
@@ -157,6 +165,8 @@ def main(argv=None):
     manifest = {'name': config['name'], 'generated_at': now, 'checked_at': now, **stats, 'rules_sha256': digest,
                 'feed_sha256': hashlib.sha256(blocklist.encode()).hexdigest(),
                 'sources': [entry[2] for entry in fetched]}
+    if local_metadata:
+        manifest['local_rules'] = local_metadata
     feed_path = args.output_dir / 'blocklist.txt'
     if (old and old.get('rules_sha256') == digest
             and old.get('name', config['name']) == config['name']

@@ -1,5 +1,6 @@
 {
   "name": "Rossi consolidated DNS blocklist",
+  "local_rules": "custom-rules.txt",
   "sources": [
     {"name": "AdGuard DNS filter", "url": "https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt", "minimum_rules": 20000},
     {"name": "OISD Full", "url": "https://big.oisd.nl", "minimum_rules": 20000},
