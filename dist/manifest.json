@@ -1,0 +1,42 @@
+{
+  "generated_at": "2026-11-02T15:27:31+00:00",
+  "input_rule_lines": 598478,
+  "exact_duplicates_removed": 103849,
+  "redundant_plain_subdomain_rules_removed": 11693,
+  "badfilter_rules_preserved": 5,
+  "disabled_plain_parents_excluded_from_pruning": 4,
+  "output_rule_lines": 482936,
+  "exception_rules_preserved": 212,
+  "rules_sha256": "baf4970b5730bfd511cff09a4fd11f96692465179c35bad3154276e6a8fc2a74",
+  "feed_sha256": "8ca62a635284277ff41acf34c3f278f4a0f4740bd029491e76eb2e78e9c17d96",
+  "sources": [
+    {
+      "name": "AdGuard DNS filter",
+      "url": "https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt",
+      "bytes": 4562860,
+      "sha256": "f1707cef95c0224cc3358f8f0154e746c3fdcad3537f80314494f4f84bb2adef",
+      "rule_lines": 186726
+    },
+    {
+      "name": "OISD Full",
+      "url": "https://big.oisd.nl",
+      "bytes": 5242777,
+      "sha256": "96e3bc0abf3e56106cdfd04af70a83d47dc51663cbfa31618766a6dbc0201528",
+      "rule_lines": 231721
+    },
+    {
+      "name": "1Hosts Lite",
+      "url": "https://badmojr.github.io/1Hosts/Lite/adblock.txt",
+      "bytes": 2347853,
+      "sha256": "f2d89a0f4b60d420a852419352473c2d3bde02b4a9772dd2cc7eb448200bd070",
+      "rule_lines": 102259
+    },
+    {
+      "name": "Steven Black",
+      "url": "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts",
+      "bytes": 2353610,
+      "sha256": "0d81148f9990ecbde614ba1a135f81113fbb5f9972e783af22ff1c6dadb57508",
+      "rule_lines": 77772
+    }
+  ]
+}

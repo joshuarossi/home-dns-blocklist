@@ -1,0 +1,9 @@
+{
+  "name": "Rossi consolidated DNS blocklist",
+  "sources": [
+    {"name": "AdGuard DNS filter", "url": "https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt", "minimum_rules": 20000},
+    {"name": "OISD Full", "url": "https://big.oisd.nl", "minimum_rules": 20000},
+    {"name": "1Hosts Lite", "url": "https://badmojr.github.io/1Hosts/Lite/adblock.txt", "minimum_rules": 20000},
+    {"name": "Steven Black", "url": "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts", "minimum_rules": 20000}
+  ]
+}
