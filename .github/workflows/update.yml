@@ -1,0 +1,39 @@
+name: Refresh consolidated DNS list
+
+on:
+  schedule:
+    - cron: '17 8 * * *'
+  workflow_dispatch:
+  push:
+    paths:
+      - build.py
+      - test_build.py
+      - sources.json
+      - .github/workflows/update.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: dns-list-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Test conservative merging
+        run: python3 -m unittest -v
+      - name: Fetch, merge, and validate sources
+        run: python3 build.py
+      - name: Publish validated feed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add dist/
+          if ! git diff --cached --quiet; then
+            git commit -m "Refresh consolidated DNS feed"
+            git push
+          fi
