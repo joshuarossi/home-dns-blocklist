@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-02T15:27:31+00:00",
+  "generated_at": "2026-11-02T15:28:55+00:00",
   "input_rule_lines": 598478,
   "exact_duplicates_removed": 103849,
   "redundant_plain_subdomain_rules_removed": 11693,
@@ -8,7 +8,7 @@
   "output_rule_lines": 482936,
   "exception_rules_preserved": 212,
   "rules_sha256": "baf4970b5730bfd511cff09a4fd11f96692465179c35bad3154276e6a8fc2a74",
-  "feed_sha256": "8ca62a635284277ff41acf34c3f278f4a0f4740bd029491e76eb2e78e9c17d96",
+  "feed_sha256": "5ed63dcc6547e8c9cd152539a718cc4febe8b1a2fc90f74d2727c298dab5a07f",
   "sources": [
     {
       "name": "AdGuard DNS filter",
