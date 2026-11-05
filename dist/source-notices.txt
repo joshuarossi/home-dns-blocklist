@@ -5,7 +5,7 @@ URL: https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt
 ! Description: Filter composed of several other filters (AdGuard Base filter, Tracking Protection filter, Mobile ads filter, EasyList, EasyPrivacy, etc) and simplified specifically to be better compatible with DNS-level ad blocking.
 ! Homepage: https://github.com/AdguardTeam/AdguardSDNSFilter
 ! License: https://github.com/AdguardTeam/AdguardSDNSFilter/blob/master/LICENSE
-! Last modified: 2026-11-04T16:10:00.685Z
+! Last modified: 2026-11-05T16:11:13.769Z
 !
 ! Compiled by @adguard/hostlist-compiler v2.1.0
 !
@@ -775,6 +775,8 @@ URL: https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt
 ! https://github.com/AdguardTeam/AdguardFilters/issues/42797
 ! goguardian tracking
 !
+! eyepin.com
+!
 !
 ! NOTE: CNAME disguised tracking networks
 ! SECTION: CNAME disguised tracking networks
@@ -1426,6 +1428,8 @@ URL: https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt
 ! Source name: Exception rules
 ! Source: Filters/exceptions.txt
 !
+! https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/2128
+! Blocked by CNAME data.adobedc.net
 ! https://github.com/AdguardTeam/AdguardFilters/issues/243444
 ! Blocked by CNAME protecmedia.com
 ! https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/2112
@@ -1671,12 +1675,12 @@ URL: https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt
 
 SOURCE: OISD Full
 URL: https://big.oisd.nl
-! Version: 202611041618
+! Version: 202611051605
 ! Title: oisd big
 ! Description: Block. Don't break.
 ! Syntax: Adblock Plus Filter List
-! Entries: 232234
-! Last modified: 2026-11-04T16:18:38+0000
+! Entries: 232528
+! Last modified: 2026-11-05T16:05:00+0000
 ! Expires: 1 hours
 ! License: https://github.com/sjhgvr/oisd/blob/main/LICENSE
 ! Maintainer: Stephan van Ruth
