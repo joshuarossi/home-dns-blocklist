@@ -5,7 +5,7 @@ URL: https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt
 ! Description: Filter composed of several other filters (AdGuard Base filter, Tracking Protection filter, Mobile ads filter, EasyList, EasyPrivacy, etc) and simplified specifically to be better compatible with DNS-level ad blocking.
 ! Homepage: https://github.com/AdguardTeam/AdguardSDNSFilter
 ! License: https://github.com/AdguardTeam/AdguardSDNSFilter/blob/master/LICENSE
-! Last modified: 2026-11-05T16:11:13.769Z
+! Last modified: 2026-11-06T14:10:25.306Z
 !
 ! Compiled by @adguard/hostlist-compiler v2.1.0
 !
@@ -775,8 +775,6 @@ URL: https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt
 ! https://github.com/AdguardTeam/AdguardFilters/issues/42797
 ! goguardian tracking
 !
-! eyepin.com
-!
 !
 ! NOTE: CNAME disguised tracking networks
 ! SECTION: CNAME disguised tracking networks
@@ -880,6 +878,10 @@ URL: https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt
 !
 ! Extole : extole.com disguised trackers
 ! not included
+!
+! Eyepin : post.eyepinnews.com disguised trackers
+!
+! Company name: Eyepin
 !
 ! Fathom : fathomdns.com disguised trackers
 !
@@ -1226,8 +1228,8 @@ URL: https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt
 # A hosts file that aims to get rid of ads, tracking, scams & badware on (mostly) Swedish websites
 # ----
 # title:          Frellwit's Swedish Hosts File
-# last updated:   2026-11-03 15:42:36 CET
-# entries:        1151
+# last updated:   2026-11-06 07:42:53 CET
+# entries:        1152
 # format:         hosts (hosts -- in hosts file format)
 # homepage:       https://github.com/lassekongo83/Frellwits-filter-lists/
 !
@@ -1675,12 +1677,12 @@ URL: https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt
 
 SOURCE: OISD Full
 URL: https://big.oisd.nl
-! Version: 202611051605
+! Version: 202611061506
 ! Title: oisd big
 ! Description: Block. Don't break.
 ! Syntax: Adblock Plus Filter List
-! Entries: 232528
-! Last modified: 2026-11-05T16:05:00+0000
+! Entries: 232696
+! Last modified: 2026-11-06T15:06:12+0000
 ! Expires: 1 hours
 ! License: https://github.com/sjhgvr/oisd/blob/main/LICENSE
 ! Maintainer: Stephan van Ruth
