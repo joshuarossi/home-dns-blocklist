@@ -5,7 +5,7 @@ URL: https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt
 ! Description: Filter composed of several other filters (AdGuard Base filter, Tracking Protection filter, Mobile ads filter, EasyList, EasyPrivacy, etc) and simplified specifically to be better compatible with DNS-level ad blocking.
 ! Homepage: https://github.com/AdguardTeam/AdguardSDNSFilter
 ! License: https://github.com/AdguardTeam/AdguardSDNSFilter/blob/master/LICENSE
-! Last modified: 2026-11-07T14:08:08.208Z
+! Last modified: 2026-11-08T14:08:07.065Z
 !
 ! Compiled by @adguard/hostlist-compiler v2.1.0
 !
@@ -1666,12 +1666,12 @@ URL: https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt
 
 SOURCE: OISD Full
 URL: https://big.oisd.nl
-! Version: 202611071406
+! Version: 202611081506
 ! Title: oisd big
 ! Description: Block. Don't break.
 ! Syntax: Adblock Plus Filter List
-! Entries: 232434
-! Last modified: 2026-11-07T14:06:03+0000
+! Entries: 232114
+! Last modified: 2026-11-08T15:06:30+0000
 ! Expires: 1 hours
 ! License: https://github.com/sjhgvr/oisd/blob/main/LICENSE
 ! Maintainer: Stephan van Ruth
@@ -1702,8 +1702,8 @@ URL: https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
 # This hosts file is a merged collection of hosts from reputable sources,
 # with a dash of crowd sourcing via GitHub
 #
-# Date: 01 November 2026 18:49:06 (UTC)
-# Number of unique domains: 77,758
+# Date: 08 November 2026 03:20:51 (UTC)
+# Number of unique domains: 78,215
 #
 # Fetch the latest version of this file: https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
 # Project home page: https://github.com/StevenBlack/hosts
@@ -4397,8 +4397,8 @@ URL: https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
 # Start KADhosts
 # Title: KADhosts
 # Description: Filtry chroniace przed roznego rodzaju przekretami i oszustwami, takimi jak np. subskrypcje SMS, wirusy i falszywe sklepy internetowe. Oprocz wlasnego zestawu, zawieraja one rowniez wpisy z list stworzonych przez takie zespoly jak np. CERT Polska, legalniewsieci.pl i KNF.
-# Last modified: Sun, 01 Nov 2026, 15:34 UTC+01:00
-# Version: 2026.11.1.1
+# Last modified: Sun, 08 Nov 2026, 00:09 UTC+01:00
+# Version: 2026.11.8.0
 # Expires: 2 days
 # Website: https://kadantiscam.netlify.app/
 # Based on: https://github.com/FiltersHeroes/KAD
