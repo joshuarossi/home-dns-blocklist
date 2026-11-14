@@ -1,30 +1,30 @@
 {
   "name": "Rossi consolidated DNS blocklist",
-  "generated_at": "2026-11-13T16:26:29+00:00",
-  "checked_at": "2026-11-13T16:26:29+00:00",
-  "input_rule_lines": 599772,
-  "exact_duplicates_removed": 106295,
+  "generated_at": "2026-11-14T15:06:03+00:00",
+  "checked_at": "2026-11-14T15:06:03+00:00",
+  "input_rule_lines": 599084,
+  "exact_duplicates_removed": 106529,
   "redundant_plain_subdomain_rules_removed": 11788,
   "badfilter_rules_preserved": 5,
   "disabled_plain_parents_excluded_from_pruning": 4,
-  "output_rule_lines": 481689,
+  "output_rule_lines": 480767,
   "exception_rules_preserved": 216,
-  "rules_sha256": "8a9f9e8508459b8bbb49f40e72ef2c7eb6e47b7c44c8f5324bdf8b6f4b9e45fe",
-  "feed_sha256": "1cde008e7bd688c2fb779a6db094de7f1f6c380615346bfbb111acedbe67ab9d",
+  "rules_sha256": "592579b7913a323ccb22120a4a58fc663fe795a7b4b948146f71b7f6ec8f994b",
+  "feed_sha256": "78b9ec3b9435316e83724b0a11c58f8ec26e26d6f648c39f82b20447bdee38fc",
   "sources": [
     {
       "name": "AdGuard DNS filter",
       "url": "https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt",
-      "bytes": 4674006,
-      "sha256": "3503aa3a16795a5856a921d829daf74c0d56a07ebed56446e19a961ede9f9144",
-      "rule_lines": 191216
+      "bytes": 4681859,
+      "sha256": "a68209fbcb008fb3080636dd13fc645956967c2d2301e2eb1cf4f099141d13a3",
+      "rule_lines": 191561
     },
     {
       "name": "OISD Full",
       "url": "https://big.oisd.nl",
-      "bytes": 5150529,
-      "sha256": "5ac1b7a1ad559fe815c0586fb84732cf7e365c8f76cb40ef1c077cf848648cd8",
-      "rule_lines": 228067
+      "bytes": 5142635,
+      "sha256": "2e4dbfd80ccb4652a89a936fc29e55d8a2d4473db5697fc492e6cf0be92239a5",
+      "rule_lines": 227940
     },
     {
       "name": "1Hosts Lite",
@@ -36,9 +36,9 @@
     {
       "name": "Steven Black",
       "url": "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts",
-      "bytes": 2378843,
-      "sha256": "35dba9f4adebb171b23c117b5360232ad3b35df761893dcec008e67c56581938",
-      "rule_lines": 78229
+      "bytes": 2361640,
+      "sha256": "f92d65e8f604c0eff1684ed4ee47b05416eeedf6b24dcacaff0743f7f231e956",
+      "rule_lines": 77323
     }
   ],
   "local_rules": {
