@@ -1,30 +1,30 @@
 {
   "name": "Rossi consolidated DNS blocklist",
-  "generated_at": "2026-11-22T16:16:59+00:00",
-  "checked_at": "2026-11-22T16:16:59+00:00",
-  "input_rule_lines": 595293,
-  "exact_duplicates_removed": 105496,
-  "redundant_plain_subdomain_rules_removed": 11684,
+  "generated_at": "2026-11-23T20:15:18+00:00",
+  "checked_at": "2026-11-23T20:15:18+00:00",
+  "input_rule_lines": 593409,
+  "exact_duplicates_removed": 105568,
+  "redundant_plain_subdomain_rules_removed": 11750,
   "badfilter_rules_preserved": 5,
   "disabled_plain_parents_excluded_from_pruning": 4,
-  "output_rule_lines": 478113,
+  "output_rule_lines": 476091,
   "exception_rules_preserved": 216,
-  "rules_sha256": "69f4707d43157631ad0624ebd3f8c33daabf88ae4f95ea8828b844134c95e4d9",
-  "feed_sha256": "fc4eaf6515cfa0b7b1a126dfaf9f0b6536d4bd77f064bcce5e5bd0be44d37ebf",
+  "rules_sha256": "224ba64cd247940b02c9b03d101f063f62e19b66cbfdd304d0856b6fe64cb174",
+  "feed_sha256": "d234e780bdca1953fc27c6f09ff04f827104dd64f9c867f4cb98c9559fdc2f15",
   "sources": [
     {
       "name": "AdGuard DNS filter",
       "url": "https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt",
-      "bytes": 4702497,
-      "sha256": "5b4ad9bc1067f174062420b45923bd72ca508b58b203166955d892e53e30bbae",
-      "rule_lines": 192421
+      "bytes": 4749591,
+      "sha256": "f80f39a55dddc675dde808da0d2f7f22bd2cde65bb2386114631655e56efba38",
+      "rule_lines": 194165
     },
     {
       "name": "OISD Full",
       "url": "https://big.oisd.nl",
-      "bytes": 5058472,
-      "sha256": "19ba96104b2682a226f4f21416a5ec322d8f530113fd98fabde296112d40e976",
-      "rule_lines": 224494
+      "bytes": 4989520,
+      "sha256": "2b4c8459d5481f6f873beedfb5bfa2e4e4526a399821a739607b17a401804bea",
+      "rule_lines": 220866
     },
     {
       "name": "1Hosts Lite",
