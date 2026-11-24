@@ -5,7 +5,7 @@ URL: https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt
 ! Description: Filter composed of several other filters (AdGuard Base filter, Tracking Protection filter, Mobile ads filter, EasyList, EasyPrivacy, etc) and simplified specifically to be better compatible with DNS-level ad blocking.
 ! Homepage: https://github.com/AdguardTeam/AdguardSDNSFilter
 ! License: https://github.com/AdguardTeam/AdguardSDNSFilter/blob/master/LICENSE
-! Last modified: 2026-11-23T20:08:44.290Z
+! Last modified: 2026-11-24T18:11:49.924Z
 !
 ! Compiled by @adguard/hostlist-compiler v2.1.0
 !
@@ -1460,8 +1460,6 @@ URL: https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt
 ! https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/2003
 ! Blocked by CNAME data.adobedc.net
 ! https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/2001
-! https://github.com/AdguardTeam/AdguardFilters/issues/220979
-! Blocked by CNAME moengage.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/216594
 ! Blocked by CNAME ads.viralize.tv
 ! https://github.com/AdguardTeam/AdGuardSDNSFilter/pull/1984
@@ -1678,12 +1676,12 @@ URL: https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt
 
 SOURCE: OISD Full
 URL: https://big.oisd.nl
-! Version: 202611232005
+! Version: 202611241921
 ! Title: oisd big
 ! Description: Block. Don't break.
 ! Syntax: Adblock Plus Filter List
-! Entries: 220866
-! Last modified: 2026-11-23T20:05:24+0000
+! Entries: 221318
+! Last modified: 2026-11-24T19:21:46+0000
 ! Expires: 1 hours
 ! License: https://github.com/sjhgvr/oisd/blob/main/LICENSE
 ! Maintainer: Stephan van Ruth
@@ -1714,8 +1712,8 @@ URL: https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
 # This hosts file is a merged collection of hosts from reputable sources,
 # with a dash of crowd sourcing via GitHub
 #
-# Date: 15 November 2026 20:29:11 (UTC)
-# Number of unique domains: 76,104
+# Date: 24 November 2026 03:28:58 (UTC)
+# Number of unique domains: 81,676
 #
 # Fetch the latest version of this file: https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
 # Project home page: https://github.com/StevenBlack/hosts
@@ -4410,8 +4408,8 @@ URL: https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
 # Start KADhosts
 # Title: KADhosts
 # Description: Filtry chroniace przed roznego rodzaju przekretami i oszustwami, takimi jak np. subskrypcje SMS, wirusy i falszywe sklepy internetowe. Oprocz wlasnego zestawu, zawieraja one rowniez wpisy z list stworzonych przez takie zespoly jak np. CERT Polska, legalniewsieci.pl i KNF.
-# Last modified: Sun, 15 Nov 2026, 19:54 UTC+01:00
-# Version: 2026.11.15.3
+# Last modified: Mon, 23 Nov 2026, 20:32 UTC+01:00
+# Version: 2026.11.23.0
 # Expires: 2 days
 # Website: https://kadantiscam.netlify.app/
 # Based on: https://github.com/FiltersHeroes/KAD
@@ -5706,7 +5704,7 @@ URL: https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
 # See below for acknowledgements.
 # Please forward any additions, corrections or comments by email to
 # hosts@someonewhocares.org
-# Last updated: Wed, 11 Nov 2026 at 17:57:34 GMT
+# Last updated: Sun, 22 Nov 2026 at 18:41:00 GMT
 # Use this file to prevent your computer from connecting to selected
 # internet hosts. This is an easy and effective way to protect you from
 # many types of spyware, reduces bandwidth use, blocks certain pop-up
